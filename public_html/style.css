@@ -12,10 +12,151 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	background-color: white;
+}
+
+@media screen and (min-width: 600px) {
+	header {
+		flex-direction: column;
+	}
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 1.5rem;
+	font-weight: 100;
+	line-height: 1;
+}
+
+small {
+	font-size: 85%;
+}
+
+span.hed {
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 2.5em;
+	font-weight: 100;
+}
+
 p {
 	margin-bottom: 1em; 
 }
 
-.no-css {
+#content-wrapper {
+	padding-top: 3em;
+}
+
+.banner {
+	position: relative;
+}
+
+.banner p {
+	position: absolute; 
+	top: 40%; 
+
+ 	left: 0; 
+ 	right: 0; 
+ 	margin: 0 auto;
+ 	width: 80%;
+
+ 	font-size: 150%;
+ 	text-align: center;
+	color: white
+	/*background-color: rgba(255 255 255 50);*/
+}
+
+.apply, .no-css {
 	display: none;
+}
+
+.skip {
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+.skip {
+  background: #e77e23;
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.skip:focus {
+  transform: translateY(0%);
+}
+
+.logo {
+	display: flex;
+	/*width: 60%;*/
+	border: 1px solid red;
+}
+
+.logo img {
+	width: 20vw;
+}
+
+
+/*Footer Rules*/
+
+.meta-info {
+	display: flex;
+}
+
+.partners {
+	display: flex;
+}
+
+.legal {
+	text-align: center;
+}
+
+
+/*Navigation Rules*/
+.menu-toggle {
+
+}
+
+.pages ul {
+	display: none;
+}
+
+.social {
+	padding: .25em;
+	background-color: #ccc; 
+}
+.social ul {
+	display: flex;
+
+}
+
+@media screen and (min-width: 600px) {
+	.menu-toggle {
+		display: none;
+	}
+	.pages ul {
+		display: flex;
+	}
 }

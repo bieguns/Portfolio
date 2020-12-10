@@ -4,31 +4,41 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Welcome to Greendale</title>
-	<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/dc3b786563.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<a class="skip" href="#content-wrapper">Jump to Content</a>
 	<header>
-		<img src="imgs/crest.png" alt="">
-		<h1>Greendale <span>Community College</span></h1>
-		<button class="apply">Apply</button>
+		<div>
+			<div class="logo">
+				<img src="imgs/crest.png" alt="">
+				<h1>Greendale <span class="hed">Community College</span></h1>
+			</div>
+			<button class="apply">Apply</button>
+		</div>
+		<nav class="pages">
+			<button class="menu-toggle">Menu Icon</button>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="student.html">Student Life</a></li>
+				<li><a href="academics.html">Academics</a></li>
+				<li><a href="admissions.html">Admissions</a></li>
+			</ul>
+			<!-- <div class="breadcrumbs"></div> -->
+			<hr class="no-css">
+		</nav>
 	</header>
-	<nav class="pages">
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About Us</a></li>
-			<li><a href="student.html">Student Life</a></li>
-			<li><a href="academics.html">Academics</a></li>
-			<li><a href="admissions.html">Admissions</a></li>
-		</ul>
-		<!-- <div class="breadcrumbs"></div> -->
-		<hr class="no-css">
-	</nav>
-	<div class="banner"><h1>Welcome to Greendale</h1></div>
+	
 	<div id="content-wrapper">
+		<div class="banner">
+			<img src="imgs/campuslife5.png">
+			<p>Welcome to Greendale</p>
+		</div>
 		<main id="main">
 			<h2>Our Mission</h2>
 			<p>
@@ -49,7 +59,7 @@
 			</ul>
 		</nav>
 		<div class="meta-info">
-			<h4>Greendale Community College</h4>
+			<div>Greendale <span>Community College</span></div>
 			<address>
 				<ul>
 					<li><i class="fas fa-map-marker-alt"></i>Directions</li>
@@ -65,6 +75,6 @@
 				<li>Partner 3</li>
 			</ul>
 		</div>
-		<p><small>&copy; 2020 Sam Biegun</small></p>
+		<p class="legal"><small>&copy; 2020 Sam Biegun</small></p>
 	</footer>
 </body>
