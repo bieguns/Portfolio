@@ -54,15 +54,48 @@
 			</div>
 			<div id="content">
 				<main id="main">
-					<h2>Our Mission</h2>
 					
-					<ul>
-						<li>Accesibility</li>
-						<li>Affordability</li>
-						<li>Advancemnet</li>
-						<li>Allegience</li>
-						<li>Availibility</li>
-					</ul>
+					<form
+						class="req-form"
+					 	action="https://formspree.io/f/mbjpzaqo"
+					 	method="POST"
+					>
+					<fieldset>
+					    <legend>Admissions Request</legend>
+
+					    <labe for="name_id">Your Name</label>
+					    <input type="text" 
+					      name="name"
+					      id="name_id"
+					      placeholder="Enter Your Name" >
+
+					    <label for="email_id">Your Email</label>
+					    <input type="email" 
+					      name="email"
+					      id="email_id"
+					      placeholder="Enter Your Email">
+
+					    <label for="phone_id">Your Phone Number</label>
+					    <input type="tel" 
+					      name="phone"
+					      id="phone_id"
+					      placeholder="123-456-7890"
+					      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+					    <div><span>Format: 123-456-7890</span></div>
+
+
+					    <label for="msg_id">Leave A Message</label>
+					    <textarea name="msg" 
+					      id="msg_id" 
+					      placeholder="Enter your message"></textarea>
+
+					    <input type="checkbox" name="remember"> 
+					    Remember me
+
+					    <input type="submit" >
+					  </fieldset>
+					 </form>
 
 				</main>
 			</div>

@@ -6,7 +6,14 @@
 	box-sizing: border-box;
 }
 
+html,
 body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
 	font-size: 1em;
 	line-height: 1.5;
 	font-family: 'Roboto', sans-serif;
@@ -72,7 +79,7 @@ header {
 		border: none;
 		border-radius: 2px;
 	}
-	
+
 	.apply:hover {
 		background-color: #1F74A6;
 	}
@@ -86,18 +93,25 @@ header {
 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.2;
 }
 
-.meta-info div, h1 {
+.meta-info div,
+h1 {
 	font-size: 1.5rem;
 	font-weight: 100;
 	line-height: 1;
 }
 
-.meta-info div.hed, div.hed {
+.meta-info div.hed,
+div.hed {
 	font-size: 1rem;
 	font-weight: 400;
 }
@@ -112,14 +126,16 @@ small {
 }
 
 p {
-	margin-bottom: 1em; 
+	margin-bottom: 1em;
 }
 
-i.fas, i.fab {
+i.fas,
+i.fab {
 	color: #DDDDDD;
-} 
+}
 
 #content-wrapper {
+	flex: 1 0 auto;
 	max-width: 900px;
 	margin: 0 auto;
 	padding-top: 4.2em;
@@ -134,20 +150,102 @@ i.fas, i.fab {
 }
 
 .banner h2 {
-	position: absolute; 
-	top: 40%; 
+	position: absolute;
+	top: 40%;
 
- 	left: 0; 
- 	right: 0; 
- 	margin: 0 auto;
- 	width: 80%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 80%;
 
- 	font-size: clamp( 1.25em, 6vw, 4em );
- 	text-align: center;
+	font-size: clamp(1.25em, 6vw, 4em);
+	text-align: center;
 	color: white
-	/*background-color: rgba(255 255 255 50);*/
+		/*background-color: rgba(255 255 255 50);*/
 }
 
+/*Application Request Form*/
+form {
+  border: 3px solid #f1f1f1;
+}
+
+legend{ 
+  font-size: 125%;
+  font-style:italic;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+label{
+  display: inline-block;
+  margin-right:10px;
+  width:15%;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+span{
+  margin-left:20%;
+  font-family: italic;
+  font-weight: bold;
+}
+
+textarea{
+  width: 100%;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+input[type=checkbox]{
+    display:inline;
+    width:inherit;
+}
+
+input[type=submit] {
+  background-color: #38803C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (min-width: 600px) {
+  form{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  input{
+    width:80%;
+  }
+
+  textarea{
+    width:80%;
+    height: 25vh;
+ }
+ 
+ div + label{
+    line-height: 25vh;
+    vertical-align:top;
+ }
+}
 
 /*Student Life Gallery*/
 
@@ -170,34 +268,29 @@ i.fas, i.fab {
 }
 
 
-
-
 .no-css {
 	display: none;
 }
 
 .skip {
-  left: 50%;
-  position: absolute;
-  transform: translateY(-100%);
+	left: 50%;
+	position: absolute;
+	transform: translateY(-100%);
 }
 
 .skip {
-  background: #e77e23;
-  height: 30px;
-  left: 50%;
-  padding: 8px;
-  position: absolute;
-  transform: translateY(-100%);
-  transition: transform 0.3s;
+	background: #e77e23;
+	height: 30px;
+	left: 50%;
+	padding: 8px;
+	position: absolute;
+	transform: translateY(-100%);
+	transition: transform 0.3s;
 }
 
 .skip:focus {
-  transform: translateY(0%);
+	transform: translateY(0%);
 }
-
-
-
 
 /*Footer Rules*/
 
@@ -242,7 +335,6 @@ footer {
 	width: 25%;
 	object-fit: scale-down;
 	margin: 0 4.15%
-
 }
 
 .partners li img {
@@ -257,7 +349,8 @@ footer {
 
 /*Navigation Rules*/
 .menu-toggle {
-	height: 100%;
+	height: 2.5em;
+	width: 2.5em;
 	margin-right: 1em;
 	border: none;
 	border-radius: 4px;
@@ -272,15 +365,17 @@ i.fa-bars {
 	/*box-shadow: 2px 4px #999999;*/
 }
 
-.menu-toggle {
-	height: 2.5em;
-	width: 2.5em;
+/* added by javascipt to .pages ul to show the menu */
+.menu-show {
+	display: flex !important;
+	/* flex-direction: column; */
 }
 
 .pages ul {
 	z-index: 0;
 	display: none;
-	width:100%;
+	flex-direction: column;
+	width: 100%;
 
 	position: absolute;
 	left: 0;
@@ -304,14 +399,11 @@ i.fa-bars {
 	padding: .25em;
 }
 
-.menu-show {
-	display: flex !important;
-}
-
 .social {
 	padding: .25em;
 	background-color: #184588;
 }
+
 .social ul {
 	display: flex;
 	justify-content: space-between;
@@ -336,12 +428,12 @@ i.fa-bars {
 		top: 0;
 		position: relative;
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
 		margin: 0 auto;
 	}
+
 	.pages li {
 		padding: .25em .75em;
 	}
 }
-
-
