@@ -148,6 +148,30 @@ i.fas, i.fab {
 	/*background-color: rgba(255 255 255 50);*/
 }
 
+
+/*Student Life Gallery*/
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(5, 20vw);
+	grid-column-gap: .25em;
+	grid-row-gap: .25em;
+}
+
+.gallery img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.gallery div {
+	border: red solid 2px;
+}
+
+
+
+
 .no-css {
 	display: none;
 }
