@@ -20,6 +20,7 @@ img {
 
 header {
 	width: 100%;
+	min-height: 116px;
 	max-height: 175px;
 	position: fixed;
 	display: flex;
@@ -54,16 +55,33 @@ header {
 @media screen and (min-width: 600px) {
 	header {
 		flex-direction: column;
+		padding: 0;
+		min-height: unset;
+	}
+
+	.apply {
+		height: 3em;
+		display: block;
+		margin-right: 2em;
+		padding: 0 2em;
+		color: white;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		background-color: #67B7E6;
+		border: none;
+		border-radius: 2px;
+	}
+	
+	.apply:hover {
+		background-color: #1F74A6;
 	}
 
 	.logo-wrap {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-	}
-
-	.apply {
-		display: block;
+		align-items: center;
 	}
 
 }
@@ -115,7 +133,7 @@ i.fas, i.fab {
 	position: relative;
 }
 
-.banner p {
+.banner h2 {
 	position: absolute; 
 	top: 40%; 
 
@@ -124,7 +142,7 @@ i.fas, i.fab {
  	margin: 0 auto;
  	width: 80%;
 
- 	font-size: 150%;
+ 	font-size: clamp( 1.25em, 6vw, 4em );
  	text-align: center;
 	color: white
 	/*background-color: rgba(255 255 255 50);*/
@@ -242,12 +260,24 @@ i.fa-bars {
 
 	position: absolute;
 	left: 0;
-	top: 4.6em;
-	/*top: -4.6em;*/
+	top: 116px;
 
-	/*opacity: 0;*/
 	color: white;
-	background-color: #7AA8ED;
+	background-color: #1F74A6;
+}
+
+.pages li {
+	padding-left: 1em;
+}
+
+.pages li:hover {
+	background-color: #67B7E6;
+}
+
+.pages a {
+	color: white;
+	text-decoration: none;
+	padding: .25em;
 }
 
 .menu-show {
@@ -273,15 +303,21 @@ i.fa-bars {
 
 	.pages {
 		width: 100%;
+		background-color: #1F74A6;
 	}
 
 	.pages ul {
-		width: 100%;
+		width: 90%;
+		max-width: 900px;
 		top: 0;
 		position: relative;
 		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+	}
+	.pages li {
+		padding: .25em .75em;
 	}
 }
-
 
 
